@@ -2,7 +2,6 @@ class KontenaCli < Formula
   desc "Command-line client for Kontena container & microservices platform"
   homepage "https://kontena.io/"
   url "https://github.com/kontena/kontena.git", :tag => "v1.3.1"
-  version "1.3.1"
   head "https://github.com/kontena/kontena.git"
 
   bottle :unneeded
