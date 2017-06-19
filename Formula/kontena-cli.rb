@@ -1,8 +1,8 @@
 class KontenaCli < Formula
   desc "Command-line client for Kontena container & microservices platform"
   homepage "https://kontena.io/"
-  url "https://github.com/kontena/kontena.git", :branch => "release/v1.2.0"
-  version "1.2.0"
+  url "https://github.com/kontena/kontena.git", :tag => "v1.3.1"
+  version "1.3.1"
   head "https://github.com/kontena/kontena.git"
 
   bottle :unneeded
@@ -33,7 +33,7 @@ class KontenaCli < Formula
 
     # Write a .ruby-version file to match the current ruby version (for rbenv/rvm users)
     ruby_version = Utils.popen_read(ruby_command, "-e", "print RUBY_VERSION")
-    (bin/".ruby-version").write(ruby_version)
+    (install_dir/".ruby-version").write(ruby_version)
 
     zsh_completion.install buildpath/"cli/lib/kontena/scripts/kontena.zsh" => "_kontena"
     bash_completion.install buildpath/"cli/lib/kontena/scripts/kontena.bash" => "kontena"
